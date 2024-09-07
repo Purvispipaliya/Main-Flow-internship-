@@ -1,0 +1,157 @@
+/* Ensure to include these fonts in your HTML */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #3498db; /* Bright Blue */
+    --secondary-color: #2ecc71; /* Green */
+    --accent-color: #ff4500; /* Orange Red */
+    --background-color: #f0f2f5; /* Light Gray */
+    --text-color: #333; /* Dark Gray */
+    --section-bg: #ffffff; /* White */
+    --shadow-light: rgba(0, 0, 0, 0.15);
+    --shadow-dark: rgba(0, 0, 0, 0.25);
+    --transition-duration: 0.4s;
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+}
+
+/* General body styling */
+body {
+    font-family: var(--font-primary);
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Container for centering content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header styling */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    padding: 1.5rem 0;
+    box-shadow: 0 6px 12px var(--shadow-light);
+    position: relative;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+/* Navigation bar styling */
+nav {
+    margin-top: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 30px;
+    box-shadow: 0 4px 8px var(--shadow-light);
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease, transform var(--transition-duration) ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: rgb(80, 80, 231);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-dark);
+}
+
+/* Main content styling */
+main {
+    padding: 2.5rem 0;
+}
+
+/* Section styling */
+section {
+    background: var(--section-bg);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px var(--shadow-light);
+    transition: box-shadow var(--transition-duration) ease, transform var(--transition-duration) ease;
+}
+
+section:hover {
+    box-shadow: 0 8px 16px var(--shadow-dark);
+    transform: translateY(-8px);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-family: var(--font-secondary);
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+/* Footer styling */
+footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    box-shadow: 0 -6px 12px var(--shadow-light);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
